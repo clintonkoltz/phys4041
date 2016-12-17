@@ -1,0 +1,7 @@
+# from terminal command line enter:
+#   gnuplot pre_cor.gps
+set terminal postscript enhanced solid color
+set output 'pre_cor.ps'
+set xlabel "t"
+set ylabel "y(t)"
+plot 'pre_cor.dat' using 1:2 title '0 < t < 1','long.dat' using 1:2 with lines title "dt = 0.1",'stab.dat' using 1:2 title "dt = 3.337"

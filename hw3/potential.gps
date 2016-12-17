@@ -1,0 +1,6 @@
+# from terminal command line enter:
+#   gnuplot potential.gps
+set terminal postscript color
+set output 'potential.ps'
+set dgrid3d 40,40 # for 3d plotting, draw smooth interpolating surface through raw data on a 40 X 40 grid
+splot 'potential.dat' using 1:2:3 with lines title 'potential'

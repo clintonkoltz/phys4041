@@ -1,0 +1,7 @@
+# from terminal command line enter:
+# gnuplot prob1.gps
+set terminal postscript solid color
+set output 'advect.ps'
+plot 't-0.0000_a-0.99.dat' with lines title 't = 0', 't-1.0016_a-0.99.dat' with lines title 't = 1', 't-2.0033_a-0.99.dat' with lines title 't = 2'
+set output 'instab.ps'
+plot 't-0.1009_a-0.99.dat' with lines title 'a = 0.99', 't-0.1035_a-1.10.dat' with lines title 'a = 0.99'

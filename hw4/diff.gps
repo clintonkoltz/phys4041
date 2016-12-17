@@ -1,0 +1,8 @@
+# from terminal command line enter:
+#   gnuplot diff.gps
+set terminal postscript enhanced color
+set logscale xy
+set output 'diff.ps'
+set xlabel "# of points"
+set ylabel "{/Symbol e}/f{/Symbol \242}(x)"
+plot 'diff.dat' using 1:2 with lines title 'forward difference','' using 1:3 with lines title "central difference",30*x**(-1) lc 0 title '\~ n^{-1}',1000*x**(-2) lc 7 title '\~n^{-2}'

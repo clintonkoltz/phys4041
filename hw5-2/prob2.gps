@@ -1,0 +1,9 @@
+#   makes surface plot for T(x,y), requires at least gnuplot 4.4
+#   from terminal command line enter:
+#    gnuplot --persist prob2.gps
+
+#set terminal postscript color 
+#set output 'T_xy.ps'
+set dgrid3d 121, 41 exp 0.01
+set view 80,150
+splot 'T_xy.dat' with lines palette

@@ -1,0 +1,7 @@
+# from terminal command line enter:
+#   gnuplot stress.gps
+set terminal postscript enhanced solid color
+set output 'stress.ps'
+set xlabel "radius"
+set ylabel "shear stress"
+plot 'stress.dat' using 1:2 title 'T from FDs of discrete data','stress_spline.dat' using 1:2 with lines title "T from FDs of cubic spline"

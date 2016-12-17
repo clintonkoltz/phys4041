@@ -1,0 +1,6 @@
+# from command line enter:
+#   gnuplot schrod.fit
+# performs linear fit of log(E_n) = m*log(n) + b to determine
+# power-law scaling E_n ~ n^m
+f(x) = m*x + b
+fit f(x) 'schrodlog.dat' using 1:2 via m,b
